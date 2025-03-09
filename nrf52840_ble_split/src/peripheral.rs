@@ -59,8 +59,8 @@ async fn main(spawner: Spawner) {
 
     let (input_pins, output_pins) =
         config_matrix_pins_nrf!(peripherals: p, input: [P0_11,P1_00,P0_24,P0_22], output:  [P1_15, P1_13,P1_11,P1_10,P0_09,P1_06,P1_08,P0_31,P0_29,P0_02]);
-    let central_addr = [0x42, 0x8b, 0x3f, 0xd1, 0x56, 0xa9];
-    let peripheral_addr = [0x9c, 0x27, 0x64, 0xe5, 0x3d, 0xb2];
+    let central_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7];
+    let peripheral_addr = [0x7e, 0xfe, 0x73, 0x9e, 0x66, 0xe3];    
     run_rmk_split_peripheral::<Input<'_>, Output<'_>, 4, 10>(
         input_pins,
         output_pins,
